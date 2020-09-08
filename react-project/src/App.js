@@ -1,10 +1,10 @@
-
-
 import React from 'react';
 
 // import './App.css';
 import HeaderNav from './components/HeaderNav.jsx';
 import HeaderTop from './components/HeaderTop.jsx';
+import Section from './components/Section.jsx';
+import About from './components/About.jsx';
 
 
 
@@ -18,6 +18,8 @@ const App = () => {
     <div>
       <HeaderNav />
       <HeaderTop />
+      <Section />
+      <About />
     </div>
   );
 }
