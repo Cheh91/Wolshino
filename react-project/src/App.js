@@ -3,8 +3,9 @@ import React from 'react';
 // import './App.css';
 import HeaderNav from './components/HeaderNav.jsx';
 import HeaderTop from './components/HeaderTop.jsx';
-import Section from './components/Section.jsx';
+import Types from './components/Types.jsx';
 import About from './components/About.jsx';
+import News from './components/News.jsx';
 
 
 
@@ -18,8 +19,9 @@ const App = () => {
     <div>
       <HeaderNav />
       <HeaderTop />
-      <Section />
+      <Types />
       <About />
+      <News />
     </div>
   );
 }

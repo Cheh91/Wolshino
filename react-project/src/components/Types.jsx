@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => ({
         fontWeight: "300",
         fontSize: "50px",
         textAlign: "center",
-        marginTop: "30px"
+        marginTop: "100px"
     },
     form: {
         bgcolor: "background.paper",
@@ -64,7 +64,7 @@ const useStyles = makeStyles(() => ({
     }
 }))
 
-const Section = () => {
+const Types = () => {
 
     const classes = useStyles()
 
@@ -134,4 +134,4 @@ const Section = () => {
 
 }
 
-export default Section
+export default Types

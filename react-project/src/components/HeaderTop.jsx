@@ -1,70 +1,62 @@
 import React from 'react';
 import './../App.css';
 import Button from '@material-ui/core/Button';
-import AppBar from '@material-ui/core/AppBar';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Box from '@material-ui/core/Box';
+import Link from '@material-ui/core/Link';
+import Typography from '@material-ui/core/Typography';
+
+const useStyles = makeStyles(() => ({
+    wrapper: {
+        display: "flex",
+        justifyContent: "space-evenly",
+        alignItems: "center"
+    },
+    link: {
+        fontSize: "28px",
+        color: "#8fc74a"
+    },
+    title:{
+        fontWeight: "400",
+        fontSize: "41px",
+        lineHeight: "34px",
+        color: "#9ba7b4",
+        letterSpacing: "2px"
+    },
+    button: {
+        background: "none",
+        border: "1px solid #8fc74a",
+        outline: "none",
+        fontSize: "14px",
+        lineHeight: "36px",
+        color: "#8fc74a",
+        textTransform: "uppercase",
+        fontWeight: "700",
+        padding: "0px 36px",
+        borderRadius: "25px"
+    }
+}))
+
 
 const HeaderTop = () => {
 
-    const headerTopContainer = {
-        width: '1440px',
-        margin: '0 auto',
-        padding: '0 15px'
-    }
-
-    const item = {
-        display: 'flex',
-        justifyContent: 'space-evenly',
-        alignItems: 'center'
-    }
-
-    const number = {
-        fontSize: '28px'
-    }
-
-    const numberItem = {
-        textDecoration: "none",
-        color: '#8fc74a',
-        fontWeight: '300',
-        
-    }
-
-    const numberBold = {
-        fontWeight: '700'
-    }
-
-    const title = {
-        fontWeight: '500',
-        fontSize: '41px',
-        color: '#9ba7b4',
-        letterSpacing: '2px'
-    }
-
-    const button = {
-        background: 'none',
-        border: '1px solid #8fc74a',
-        outline: 'none',
-        fontSize: '14px',
-        color: '#8fc74a',
-        textTransform: 'uppercase',
-        fontWeight: '700',
-        padding: '14px 36px',
-        borderRadius: '25px'
-    }
-
-    
+    const classes = useStyles()
 
     return (
-        <div style={headerTopContainer}>
-            <div style={item}>
-                <div style={number}>
-                    <a style={numberItem} href="#">+2  495 <span style={numberBold}>134-27-72</span></a>
-                </div>
-                <div style={title}>
-                wolshino.com
-                </div>
-                <button style={button}>your question</button>
-            </div>
-        </div>
+        <Container style={{ width: '1440px' }}>
+            <Box className={classes.wrapper}>
+                <Link href="#" className={classes.link}>
+                    +2  495  134-27-72
+                </Link>
+                <Typography className={classes.title}>
+                    wolshino.com
+                </Typography>
+                <Button className={classes.button}>
+                    all information
+                </Button>
+            </Box>
+        </Container>
     );
 }
 
